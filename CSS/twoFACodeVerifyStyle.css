@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+
+    background-color: #f1f1f1;
+
+}
+
+form {
+    position: relative;
+    top: 25%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bolder;
+    color: black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.twoFACodeReader {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid lightskyblue;
+    border-radius: 10px;
+}
+
+.login {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    font-weight: bolder;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login:hover {
+    background-color: black;
+}

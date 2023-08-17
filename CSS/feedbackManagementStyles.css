@@ -1,0 +1,74 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;    
+}
+
+#feedbackTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#feedbackTable th,
+#feedbackTable td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#feedbackTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.action-button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: all 0.2s ease;
+}
+
+.action-button:hover {
+    background-color: lightskyblue;
+    color: white;
+    border-radius: 10px;
+}
+
+.goBack {
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid #333;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.fa-backward {
+    font-size: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: -50px;
+    margin-bottom: -50px;
+    max-width: 150px;
+    height: auto;
+}

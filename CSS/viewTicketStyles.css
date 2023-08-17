@@ -1,0 +1,85 @@
+/* Global styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+table {
+    border: 1px solid black;
+    width: 75%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    padding: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.logo {
+    display: block;
+    margin: 10px auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid lightskyblue;
+    background-color: transparent;
+    color: lightskyblue;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.goBack a {
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+
+.goBack {
+    position: relative;
+    bottom: 400px;
+    right: 750px;
+}
+
+.downloadButton {
+    position: relative;
+    left: 75px;
+}
+
+button:hover,
+.goBack a:hover {
+    background-color: lightskyblue;
+    color: white;
+
+}
+
+.goBack button {
+    background-color: #6c757d;
+}

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+form {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+fieldset {
+    border: none;
+}
+
+h2 {
+    color: lightskyblue;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightskyblue;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="date"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightskyblue;
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    position: relative;
+    top: 50px;
+    background-color: transparent;
+    color: lightskyblue;
+    border: 1px solid lightskyblue;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: all 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: lightskyblue;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0px 0px 50px 0px;
+}
+
+th,
+td {
+    padding: 10px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+th {
+    background-color: lightskyblue;
+    color: #fff;
+    font-weight: bolder;
+}
+
+legend {
+    color: lightskyblue;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+td a {
+    color: black;
+    cursor: pointer;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+.goBackButton {
+    position: relative;
+    bottom: 500px;
+    left: 100px;
+    padding: 10px;
+    background-color: lightskyblue;
+    color: #fff;
+    font-weight: bolder;
+    border: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.goBackButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.fa-history,
+.fa-backward {
+    margin-right: 5px;
+}

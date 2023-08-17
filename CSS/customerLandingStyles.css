@@ -1,0 +1,306 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.time {
+    position: fixed;
+    bottom: 20px;
+    left: 75px;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    white-space: nowrap;
+    z-index: 99;
+}
+
+.sidebar {
+    width: 345px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: lightskyblue;
+    z-index: 99;
+    transition: width 1s;
+}
+
+.sidebarBrand {
+    height: 90px;
+    padding: 1rem 0rem 1rem 2rem;
+    color: white;
+}
+
+.sidebarBrand span {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.sidebarMenu {
+    margin-top: 1rem;
+}
+
+.sidebarMenu img {
+    width: 100%;
+    height: 30%;
+}
+
+.sidebarMenu li {
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 2rem;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+
+.sidebarMenu li:hover {
+    padding-left: 15px;
+}
+
+.sidebarMenu li.logout {
+    margin-top: 280px;
+}
+
+.sidebarMenu a {
+    padding-left: 1rem;
+    display: block;
+    color: whitesmoke;
+    font-size: 1.1rem;
+}
+
+.sidebarMenu a.active {
+    background: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: lightskyblue;
+    border-radius: 30px 0px 0px 30px;
+    font-weight: bolder;
+}
+
+.sidebarMenu a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+#navToggle:checked+.sidebar {
+    width: 70px;
+}
+
+#navToggle:checked+.sidebar .sidebarBrand,
+#navToggle:checked+.sidebar li {
+    padding-left: 1rem;
+    ;
+    text-align: center;
+}
+
+#navToggle:checked+.sidebar li a {
+    padding-left: 0rem;
+    ;
+}
+
+#navToggle:checked+.sidebar .sidebarBrand h1 span:last-child,
+#navToggle:checked+.sidebar li a span:last-child,
+#navToggle:checked+.sidebar .time,
+#navToggle.checked+.sidebar .logoDiv {
+    display: none;
+}
+
+#navToggle:checked~.mainContent {
+    margin-left: 70px;
+}
+
+#navToggle:checked~.mainContent header {
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+.mainContent {
+    transition: margin-left 1s;
+    margin-left: 345px;
+}
+
+header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 345px;
+    width: calc(100% - 345px);
+    top: 0;
+    z-index: 100;
+    transition: left 1s;
+}
+
+header h2 {
+    color: black;
+}
+
+header label span {
+    font-size: 1.7rem;
+    padding-right: 1rem;
+}
+
+.userWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.userWrapper img {
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.userWrapper small {
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 85px;
+    padding: 2rem 1.5rem;
+    background: darkgray;
+    /*----------------------------------------------*/
+    min-height: calc(100vh-90px);
+}
+
+.sidebarMenu .logoDiv {
+    padding-left: 1rem;
+    display: block;
+    color: whitesmoke;
+    font-size: 1.1rem;
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    top: 400px;
+    background-color: lightskyblue;
+    padding: 25px;
+}
+
+.row {
+    display: flex;
+    position: relative;
+
+}
+
+.footerColumn {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footerColumn h4 {
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bolder;
+    margin-bottom: 35px;
+}
+
+.footerColumn h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: crimson;
+    box-sizing: border-box;
+    width: 75%;
+}
+
+.footerColumn ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bolder;
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+.footerColumn ul li a:hover {
+    padding-left: 15px;
+}
+
+.footerColumn .socialLinks a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: whitesmoke;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.footerColumn .socialLinks a:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+.searchFlight {
+    position: fixed;
+    top: 33%;
+    left: 50%;
+    transform: translateY(-50%);
+    padding: 110px 200px;
+    transition: .5s;
+}
+
+.searchFlight a {
+    position: relative;
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 0px;
+    transition: 0.8s;
+}
+
+.searchFlight a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    color: white;
+}
+
+.searchFlight a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.searchFlight a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.miles {
+    position: relative;
+    top: 15px;
+}

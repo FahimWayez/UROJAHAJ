@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin-top: 537px;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 250px;
+    background: url("../View/images/flyingBird.gif") repeat;
+    background-size: contain;
+    animation: flyAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    pointer-events: none;
+}
+
+@keyframes flyAnimation {
+    0% {
+        /* top: -100px; */
+        left: -100px;
+        /* transform: rotate(0deg); */
+    }
+
+    50% {
+        /* top: 50%; */
+        left: 50%;
+        /* transform: rotate(180deg); */
+    }
+
+    100% {
+        /* top: 100vh; */
+        left: 80vw;
+        /* transform: rotate(360deg); */
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 100px 100px;
+    background: lightskyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    color: white;
+    user-select: none;
+    border-radius: 50%;
+    transition: transform 2s ease;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    transition: transform 1s ease;
+}
+
+.logo:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+.navigationHeader a {
+    position: relative;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 0px;
+}
+
+.navigationHeader a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigationHeader a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.motto {
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 650px;
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30), cursor 1s step-end infinite alternate;
+    transition: transform 2s ease;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+.motto:hover {
+    transform: scale(1.2);
+}
+
+.time {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    white-space: nowrap;
+    z-index: 999;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+
+    background-color: lightskyblue;
+    padding: 25px;
+}
+
+.footerColumn {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footerColumn h4 {
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bolder;
+    margin-bottom: 35px;
+}
+
+.footerColumn h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: crimson;
+    box-sizing: border-box;
+    width: 75%;
+}
+
+.footerColumn ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bolder;
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+.footerColumn ul li a:hover {
+    padding-left: 15px;
+}
+
+.footerColumn .socialLinks a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: whitesmoke;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.footerColumn .socialLinks a:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+.searchFlight {
+    position: fixed;
+    top: 48.75%;
+    left: 50%;
+    transform: translateY(-50%);
+    padding: 110px 200px;
+    transition: .5s;
+}
+
+.searchFlight:hover {
+    padding: 110px 275px;
+    background-color: lightskyblue;
+}
+
+.searchFlight a {
+    position: relative;
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 0px;
+    transition: 0.8s;
+}
+
+.searchFlight a:hover {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    color: white;
+}
+
+.searchFlight a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.searchFlight a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}

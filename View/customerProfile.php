@@ -1,0 +1,101 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+if (!isset($_SESSION["customerAuthenticated"]) || $_SESSION["customerAuthenticated"] !== true) {
+    header("location: landingPage.php");
+    exit(); 
+}
+require_once("../Model/customerProfileModel.php");
+require_once("../Controller/loginProcess.php");
+
+$storedEmail = $_SESSION["email"];
+
+$profileDetails = getProfile($storedEmail);
+$profilePhoto = $profileDetails["profilePhoto"];
+
+?>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile</title>
+    <link rel="stylesheet" href="../CSS/customerProfileStyle.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img class="profilePhoto"
+                src="../profile_photos/<?php echo $profilePhoto ? $profilePhoto : 'default.jpeg'; ?>"
+                alt="Profile Photo">
+            <h2><?php echo $profileDetails["firstName"] . " " . $profileDetails["lastName"]; ?>
+            </h2>
+        </div>
+        <div class="profileDetails">
+            <p><strong>Born:</strong> <?php echo $profileDetails["dateOfBirth"]; ?></p>
+            <p><strong>Email:</strong> <?php echo $profileDetails["email"]; ?></p>
+            <p><strong>Contact:</strong> <?php echo $profileDetails["contactNumber"]; ?></p>
+        </div>
+        <div class="editProfile">
+            <form action="customerEditProfile.php" method="post">
+                <input type="hidden" name="fName" value="<?php echo $profileDetails['firstName']; ?>">
+                <input type="hidden" name="lName" value="<?php echo $profileDetails['lastName']; ?>">
+                <input type="hidden" name="dob" value="<?php echo $profileDetails['dateOfBirth']; ?>">
+                <input type="hidden" name="address" value="<?php echo $profileDetails['countryOfResidence']; ?>">
+                <input type="hidden" name="contact" value="<?php echo $profileDetails['contactNumber']; ?>">
+                <button type="submit" class="editButton">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Edit Profile
+                </button>
+                <button type="submit" class="changeButton">
+                    <i class="fa-solid fa-key"></i>
+                    Change Password
+                </button>
+            </form>
+        </div>
+        <div class="separator"></div>
+        <h4 class="sectionTitle">Contact Details</h4>
+        <p><strong>Home Address:</strong> <?php echo $profileDetails["countryOfResidence"]; ?></p>
+        <div class="separator"></div>
+        <h4 class="sectionTitle">Official Details</h4>
+        <p><strong>Customer ID:</strong> <?php echo $profileDetails["customerID"]; ?></p>
+        <div class="separator"></div>
+        <h4 class="sectionTitle">Personal Details</h4>
+        <p><strong>Gender:</strong><?php echo $profileDetails["gender"];?></p>
+        <p><strong>Nationality:</strong><?php echo $profileDetails["nationality"];?></p>
+        <p><strong>Passport Number:</strong><?php echo $profileDetails["passportNumber"];?></p>
+        <p><strong>Passport Expiry Date:</strong><?php echo $profileDetails["passportExpiryDate"];?></p>
+        <p><strong>National ID Number:</strong><?php echo $profileDetails["nationalIDNumber"];?></p>
+        <p><strong>Payment ID:</strong><?php echo $profileDetails["paymentID"];?></p>
+        <div class="separator"></div>
+        <h4 class="sectionTitle">Other Details</h4>
+        <p><strong>Favorite Holiday Preference:</strong><?php echo $profileDetails["favoriteHolidayPreference"];?></p>
+        <p><strong>Favorite Destination:</strong><?php echo $profileDetails["favoriteDestination"];?></p>
+        <p><strong>Favorite Airport:</strong><?php echo $profileDetails["favoriteAirport"];?></p>
+        <p><strong>Preferred Seat:</strong><?php echo $profileDetails["preferredSeat"];?></p>
+        <div class="separator"></div>
+        <div class="downloadCard">
+            <form method="post" action="../Controller/downloadCustomerCardProcess.php">
+                <button type="submit" name="downloadCard">
+                    <i class="fa-solid fa-download"></i>
+                    Download Card
+                </button>
+            </form>
+        </div>
+        <div class="goBackButton">
+            <a href="customerLanding.php">
+                <i class="fa-solid fa-backward"></i>
+                Go Back
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

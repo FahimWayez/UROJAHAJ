@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header .profilePhoto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header h2 {
+    margin: 10px 0;
+    color: black;
+}
+
+.profileDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.profileDetails p {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.editProfile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.editProfile button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: white;
+    color: lightskyblue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid lightskyblue;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.editProfile button:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.editProfile i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.sectionTitle {
+    color: lightskyblue;
+    margin-bottom: 10px;
+}
+
+.separator {
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.downloadCard {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.downloadCard button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: lightskyblue;
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid lightskyblue;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.downloadCard button:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.downloadCard i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* To center the icon and text vertically */
+.downloadCard button i {
+    margin-top: -2px;
+}
+
+/* Added styles for the Go Back button */
+.goBackButton {
+    text-align: center;
+    margin-top: -530px;
+    margin-left: -480px;
+}
+
+.goBackButton a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.goBackButton a:hover {
+    border: 1px solid #333;
+}
+
+.goBackButton i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+

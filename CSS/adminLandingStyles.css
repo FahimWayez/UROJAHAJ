@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.time {
+    position: fixed;
+    bottom: 20px;
+    left: 75px;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    white-space: nowrap;
+    z-index: 99;
+}
+
+.sidebar {
+    width: 345px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: lightskyblue;
+    z-index: 99;
+    transition: width 1s;
+}
+
+.sidebarBrand {
+    height: 90px;
+    padding: 1rem 0rem 1rem 2rem;
+    color: white;
+}
+
+.sidebarBrand span {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.sidebarMenu {
+    margin-top: 1rem;
+}
+
+.sidebarMenu img {
+    width: 100%;
+    height: 30%;
+}
+
+.sidebarMenu li {
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 2rem;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+}
+
+.sidebarMenu li:hover {
+    padding-left: 15px;
+}
+
+.sidebarMenu li.logout {
+    margin-top: 150px;
+}
+
+.sidebarMenu a {
+    padding-left: 1rem;
+    display: block;
+    color: whitesmoke;
+    font-size: 1.1rem;
+}
+
+.sidebarMenu a.active {
+    background: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: lightskyblue;
+    border-radius: 30px 0px 0px 30px;
+    font-weight: bolder;
+}
+
+.sidebarMenu a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+#navToggle:checked+.sidebar {
+    width: 70px;
+}
+
+#navToggle:checked+.sidebar .sidebarBrand,
+#navToggle:checked+.sidebar li {
+    padding-left: 1rem;
+    ;
+    text-align: center;
+}
+
+#navToggle:checked+.sidebar li a {
+    padding-left: 0rem;
+    ;
+}
+
+#navToggle:checked+.sidebar .sidebarBrand h1 span:last-child,
+#navToggle:checked+.sidebar li a span:last-child,
+#navToggle:checked+.sidebar .time,
+#navToggle.checked+.sidebar .logoDiv {
+    display: none;
+}
+
+#navToggle:checked~.mainContent {
+    margin-left: 70px;
+}
+
+#navToggle:checked~.mainContent header {
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+.mainContent {
+    transition: margin-left 1s;
+    margin-left: 345px;
+}
+
+header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 345px;
+    width: calc(100% - 345px);
+    top: 0;
+    z-index: 100;
+    transition: left 1s;
+}
+
+header h2 {
+    color: black;
+}
+
+header label span {
+    font-size: 1.7rem;
+    padding-right: 1rem;
+}
+
+.searchWrapper {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.searchWrapper span {
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+}
+
+.searchWrapper:hover {
+    overflow-x: hidden;
+}
+
+.searchWrapper input {
+    height: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.userWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.userWrapper img {
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.userWrapper small {
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 85px;
+    padding: 2rem 1.5rem;
+    background: darkgray;
+    /*----------------------------------------------*/
+    min-height: calc(100vh-90px);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+
+.cardSingle {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 2rem;
+    border-radius: 2px;
+}
+
+.cardSingle div:last-child span {
+    font-size: 3rem;
+    color: lightskyblue;
+}
+
+.cardSingle div:first-child span {
+    color: black
+}
+
+.cardSingle:last-child {
+    background: lightskyblue;
+}
+
+.cardSingle:last-child h1,
+.cardSingle:last-child div:last-child span,
+.cardSingle:last-child div:first-child span {
+    color: white;
+    font-weight: bolder;
+}
+
+.sidebarMenu .logoDiv {
+    padding-left: 1rem;
+    display: block;
+    color: whitesmoke;
+    font-size: 1.1rem;
+}

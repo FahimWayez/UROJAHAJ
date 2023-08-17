@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 100px 100px;
+    background: lightskyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    color: white;
+    user-select: none;
+    border-radius: 50%;
+    transition: transform 2s ease;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    transform: translate(75%, -50%);
+    transition: transform 1s ease;
+}
+
+.logo:hover {
+    transform: translate(75%, -50%) scale(1.1);
+}
+
+.navigationHeader a {
+    position: relative;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 0px;
+}
+
+.navigationHeader a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigationHeader a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.motto {
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 650px;
+    width: 30%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30), cursor 1s step-end infinite alternate;
+    transition: transform 2s ease;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+.motto:hover {
+    transform: scale(1.2);
+}
+
+.time {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    white-space: nowrap;
+    z-index: 999;
+}
+
+table {
+    position: relative;
+    top: 150px;
+    left: 250px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    padding: 60px 0px 0px 0px;
+    margin-bottom: 50px;
+}
+
+table::hover {
+    background-color: lightskyblue;
+}
+
+td {
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+td b {
+    position: relative;
+    color: black;
+    bottom: 10px;
+}
+
+td a {
+    color: black;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td img {
+    width: 20px;
+    height: 20px;
+}
+
+table p {
+    text-align: justify;
+    padding: 10px;
+}
+
+table h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+table b {
+    font-size: 20px;
+}
+
+table td:nth-child(2) {
+    padding: 0;
+    width: 100px;
+    text-align: center;
+}
+
+table td:nth-child(2) a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+table td:nth-child(2) img {
+    width: 25px;
+    height: 25px;
+}

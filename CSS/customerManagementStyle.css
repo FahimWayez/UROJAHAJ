@@ -1,0 +1,133 @@
+/* advancedCustomerManagementStyle.css */
+
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+fieldset,
+legend,
+input,
+table {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f2f2f2;
+    max-width: 100%;
+}
+
+
+form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background: #fff;
+    margin-bottom: 0px;
+    bottom: 20px;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 40px
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.customerID {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    min-width: 800px
+}
+
+
+table {
+    width: 220%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    left: 10px
+}
+
+h3.center {
+    text-align: center;
+}
+
+.image-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.no-match {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d33;
+    text-align: center;
+    margin-top: 20px;
+}

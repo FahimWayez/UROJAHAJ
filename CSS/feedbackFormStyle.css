@@ -1,0 +1,102 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-decoration: none;
+}
+
+.feedbackForm {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#submitFeedback {
+    text-align: center;
+    width: 20%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+#submitFeedback:hover {
+    background-color: #45a049;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.previousFeedbackButton {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.goBackButton {
+    padding: 10px;
+    background-color: lightskyblue;
+    color: #fff;
+    font-weight: bolder;
+    border: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.goBackButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.fa-history,
+.fa-backward {
+    margin-right: 5px;
+}
